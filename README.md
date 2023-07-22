@@ -21,7 +21,7 @@ Hit 'o' for chat in colour
 ```
 sudo dnf install python3-pip
 pip3 install requirements.txt
-python3 the-python-server-file.py
+python3 chat-server-xonotic-v3.py
 ```
 will show Flask Running then:
 move chat-server-v3-DONE.cfg to Xonotic/data
