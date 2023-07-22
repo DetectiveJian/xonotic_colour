@@ -2,7 +2,7 @@
 Python colour code for Xonotic game chat using flask.
 
 
-***Ubuntu / Mint etc...***
+***Ubuntu / Mint etc... Linux Mint 21.1 ***
 ```
 sudo apt install python3-pip
 pip3 install -r requierments.txt
@@ -17,7 +17,7 @@ exec chat-server-v3-DONE.cfg
 Hit 'o' for chat in colour
 
 
-***Fedora***
+***Fedora Linux 38 (Workstation Edition) x86_64***
 ```
 sudo dnf install python3-pip
 pip3 install requirements.txt
