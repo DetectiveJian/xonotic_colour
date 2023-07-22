@@ -11,7 +11,9 @@ python3 chat-server-xonotic-v3.py
 will show Flask Running then:
 move chat-server-v3-DONE.cfg to Xonotic/data
 go to Xonotic and hit ` for terminal 
-```exec chat-server-v3-DONE.cfg```
+```
+exec chat-server-v3-DONE.cfg
+```
 Hit 'o' for chat in colour
 
 
@@ -24,6 +26,8 @@ python3 the-python-server-file.py
 will show Flask Running then:
 move chat-server-v3-DONE.cfg to Xonotic/data
 go to Xonotic and hit ` for terminal 
-```exec chat-server-v3-DONE.cfg```
+```
+exec chat-server-v3-DONE.cfg
+```
 Hit 'o' for chat in colour
 
