@@ -34,4 +34,5 @@ Hit 'o' for chat in colour
 
 
 
+[1]
 **"Please note i'm still adding things to this and it will change often."**
