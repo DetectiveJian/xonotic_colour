@@ -15,7 +15,7 @@ from python_translator import Translator
 
 """
 Usage:
-	Commands: help, joke, who, search, trans, test
+	Commands: help, joke, who, search, trans, test, name
 	
 	Colours: random, white, slayer, blue, google, sunset etc
 	
@@ -48,6 +48,7 @@ commands = {
 	"[who]": "say [who] ^1COMMAND: ^2OK; say ^1Shazza^7-^4Works^7, Using a little ^xf00P^xf40y^xf70t^xfa0h^xef0o^xbf0n ^x2f03^x0f03^x0f2.^x0f91^x0fd0^x0df.^x09f6 ^7and ^6Flask",
 	"[search]": "say [search] ^1COMMAND: ^2OK ; say ^2Word^7:{word} ^2Info^7: ^1{search}",
 	"[trans]": "say ^1TRS: {msg}",
+	"[name]": "say [name]  {newname} ^1COMMAND: ^2OK ; name {newname}",
 	"[test]": ""
 	}
 
@@ -282,20 +283,30 @@ def answer_the_call():
 	if cmd in coms:
 
 		if cmd == "[help]":
+			# show the commands and colours
 			return commands[cmd].format(help=f"say ^1{' '.join(coms)}; say ^1{' '.join(cols)}")
 
 		if cmd == "[joke]":
+			# grab a joke from the api
 			joke = get_joke().replace("\"", "").replace("'", "")
 			return commands[cmd].format(joke=f"^5{joke}")
 
 		if cmd == "[search]":
+			# search online for a word
 			info = duck_search(text)
 			return commands[cmd].format(word=text, search=info)
 
 		if cmd == "[who]":
+			# show who made this
 			return commands[cmd]
+		
+		if cmd == "[name]":
+			# set the player name
+			code = colour_text(text)
+			return commands[cmd].format(newname=code)
 
 		if cmd == "[trans]":
+			# translate a message
 			try:
 				c,l,t = clean.split(":")
 				msg = translate_msg(t, l)
@@ -304,6 +315,7 @@ def answer_the_call():
 			except ValueError:
 				return "say ^1[ERROR] Try: [trans]:language:Text here..."
 		if cmd == "[test]":
+			# few bits for testing
 			#return "say [*] ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ ; say [*] ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ"
 			# return "say 卂 乃 匚 ᗪ 乇 千 Ꮆ 卄 丨 ﾌ Ҝ ㄥ 爪 几 ㄖ 卩 Ɋ 尺 丂 ㄒ ㄩ ᐯ 山 乂 ㄚ 乙"
 			st = ["^5|\---/|","^5| ^1o^6_^1o ^5|","^5 \_^6^^^5_/"]
