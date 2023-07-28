@@ -54,3 +54,10 @@ __Hit 'o' for chat in colour__
 
 [1]
 __"Please note i'm still adding things to this and it will change often."__
+> command list to follow
+
+# Commands:
+<details>
+<summary>Show the list of commands and how to use them...?</summary>
+	^Command info will go here... soon^
+</details>
