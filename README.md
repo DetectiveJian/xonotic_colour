@@ -8,13 +8,13 @@ Python colour code for Xonotic game chat using flask.
 ```
 sudo apt install python3-pip
 pip3 install -r requierments.txt
-python3 chat-server-xonotic-v3.py
+python3 chat-server.py
 ```
 will show Flask Running then:
 move chat-server-v3-DONE.cfg to Xonotic/data
 go to Xonotic and hit ` for terminal 
 ```
-exec chat-server-v3-DONE.cfg
+exec chat-server.cfg
 ```
 Hit 'o' for chat in colour
 
@@ -24,13 +24,13 @@ Hit 'o' for chat in colour
 ```
 sudo dnf install python3-pip
 pip3 install requirements.txt
-python3 chat-server-xonotic-v3.py
+python3 chat-server.py
 ```
 will show Flask Running then:
 move chat-server-v3-DONE.cfg to Xonotic/data
 go to Xonotic and hit ` for terminal 
 ```
-exec chat-server-v3-DONE.cfg
+exec chat-server.cfg
 ```
 Hit 'o' for chat in colour
 
