@@ -41,7 +41,7 @@ __Hit 'o' for chat in colour__
 ### will show Flask Running then:
 __NB: move chat-server.cfg to your game Xonotic/data__
 
-> go to Xonotic and hit "`" for terminal 
+> go to Xonotic and hit ` for game console 
 
 ```
 exec chat-server.cfg
