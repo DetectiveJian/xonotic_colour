@@ -57,14 +57,14 @@ __Hit 'o' for chat in colour__
 
 | Command | Description |
 | ---- | ---- |
-| o | KEY 'o' is bound to new colour chat command. |
+| o | KEY 'o' is bound to new colour chat command, press to speak. |
 | [help] | Sow the commands and colour list. |
 | [who] | Show who made this app. |
 | [font] | Switch on/off toggle fancy fonts with your message. |
 | [joke] | Get a random joke from an api. |
 | [test] | Used to do some testing... atm prints a cat on 3 lines. |
 | [search]Word | Search for word referance, return results. |
-| [name]Name | Change the player name to given string. |
+| [name]Name | Change the player name to given string in set colour. |
 | [trans]:lang:msg | Translate from english to given language, TRS:message in language. |
 
 </details>
@@ -77,7 +77,7 @@ __Hit 'o' for chat in colour__
 + [white]
 + [slayer]
 + [blur]
-+ [google]
++ [google] ['#4885ed', '#db3236', '#f4c20d', '#4885ed', '#3cba54', '#db3236', '#4885ed', '#db3236', '#f4c20d', '#4885ed', '#3cba54', '#db3236']
 + [sunset]
 + [grey]
 + [rain]
