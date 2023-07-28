@@ -77,7 +77,7 @@ __Hit 'o' for chat in colour__
 + [white]
 + [slayer]
 + [blur]
-+ [google]`#4885ed` `#db3236` `#f4c20d` `#4885ed` `#3cba54` `#db3236` `#4885ed` `#db3236` `#f4c20d` `#4885ed` `#3cba54` `#db3236`
++ [google]
 + [sunset]
 + [grey]
 + [rain]
