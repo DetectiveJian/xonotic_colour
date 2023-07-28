@@ -12,7 +12,7 @@ python3 chat-server.py
 ```
 will show Flask Running then:
 move chat-server.cfg to your game Xonotic/data
-go to Xonotic and hit ` for terminal 
+go to Xonotic and hit ` \` ` for terminal 
 ```
 exec chat-server.cfg
 ```
@@ -28,7 +28,7 @@ python3 chat-server.py
 ```
 will show Flask Running then:
 move chat-server.cfg to your game Xonotic/data
-go to Xonotic and hit ` for terminal 
+go to Xonotic and hit ` \` ` for terminal 
 ```
 exec chat-server.cfg
 ```
