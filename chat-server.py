@@ -4,6 +4,7 @@
 # 5th Jul 2023
 import re
 import sys
+import json
 import codecs
 import random
 import requests
@@ -42,6 +43,8 @@ app = Flask(__name__)
 COLOUR = []
 # Global Font Set
 FONT = False
+# Seen Jokes
+JOKES = []
 
 
 def toggle_font():
@@ -79,10 +82,15 @@ def get_joke():
 	args: None
 	return str(joke)
 	"""
-	jokesapi = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt&type=single"
-	r = requests.get(jokesapi)
-	joke = r.text.replace("\n", " ")
-	return joke
+	global JOKES
+	jokesapi = "https://api.chucknorris.io/jokes/random"
+	r = requests.get(jokesapi).content
+	joke = json.loads(r)['value']
+	while not joke in JOKES:
+		JOKES.append(joke)
+		return joke
+	else:
+		get_joke()
 
 
 def duck_search(text):
@@ -197,7 +205,7 @@ def answer_the_call():
 
 		if cmd == "[help]":
 			# show the commands and colours
-			return commands[cmd].format(help=f"say ^1{' '.join(coms)}; say ^1{' '.join(cols)}")
+			return commands[cmd].format(help=f"say ^1{' '.join(coms)}; defer 3.2 \"say ^1{' '.join(cols)}\"")
 
 		if cmd == "[joke]":
 			# grab a joke from the api
