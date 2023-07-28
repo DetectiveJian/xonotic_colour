@@ -56,11 +56,11 @@ __"Please note i'm still adding things to this and it will change often."__
 # Commands:
 <details>
 <summary>Show the list of commands and how to use them...?</summary>
-	Command | Description
-	---- | ----
-	[name] | [name] Something : Change the player name to Something. 
-	[font] | Switch on/off toggle fancy fonts with your message.
-	[TMP] | MORE TO FILL OUT HERE SOON
+	|Command | Description|
+	|---- | ----|
+	|[name] | [name] Something : Change the player name to Something.|
+	|[font] | Switch on/off toggle fancy fonts with your message.|
+	|[TMP] | MORE TO FILL OUT HERE SOON|
 
 </details>
 
