@@ -28,6 +28,8 @@ __Hit 'o' for chat in colour__
 </details>
 
 
+
+
 # *Fedora Linux 38 (Workstation Edition) x86_64*
 <details>
 <summary>How to setup...</summary>
@@ -52,12 +54,20 @@ __Hit 'o' for chat in colour__
 </details>
 
 
+
+
 [1]
 __"Please note i'm still adding things to this and it will change often."__
-> command list to follow
+
+
+
 
 # Commands:
 <details>
 <summary>Show the list of commands and how to use them...?</summary>
 	^Command info will go here... soon^
 </details>
+
+
+
+
