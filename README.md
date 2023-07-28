@@ -11,7 +11,7 @@ pip3 install -r requierments.txt
 python3 chat-server.py
 ```
 will show Flask Running then:
-move chat-server-v3-DONE.cfg to Xonotic/data
+move chat-server.cfg to your game Xonotic/data
 go to Xonotic and hit ` for terminal 
 ```
 exec chat-server.cfg
@@ -27,7 +27,7 @@ pip3 install requirements.txt
 python3 chat-server.py
 ```
 will show Flask Running then:
-move chat-server-v3-DONE.cfg to Xonotic/data
+move chat-server.cfg to your game Xonotic/data
 go to Xonotic and hit ` for terminal 
 ```
 exec chat-server.cfg
