@@ -14,7 +14,7 @@ Python colour code for Xonotic game chat using flask.
 	python3 chat-server.py
 ```
 
-### will show Flask Running then:
+### will show Flask Running @ 127.0.0.1 port 5000 then:
 __NB: move chat-server.cfg to your game Xonotic/data__
 
 > go to Xonotic and hit ` for game console
@@ -37,7 +37,7 @@ __Hit 'o' for chat in colour__
 	python3 chat-server.py
 ```
 
-### will show Flask Running then:
+### will show Flask Running @ 127.0.0.1 port 5000 then:
 __NB: move chat-server.cfg to your game Xonotic/data__
 
 > go to Xonotic and hit ` for game console 
@@ -50,21 +50,49 @@ __Hit 'o' for chat in colour__
 
 </details>
 
-[1]
-__"Please note i'm still adding things to this and it will change often."__
 
 # Commands:
 <details>
-<summary>Show the list of commands and how to use them...?</summary>
-
+<summary>Show the list of commands and how to use them.</summary>
 | Command | Description |
 | ---- | ---- |
+| o | KEY o is bound to new colour chat command. |
+| [help] | Sow the commands and colour list. |
+| [joke] | Get a random joke from an api. |
+| [search] | [search] Word : Search for word referance. |
+| [who] | Show who made this app. |
+| [trans] | [trans]:language:your message > translate from english. |
 | [name] | [name] Something : Change the player name to Something. |
 | [font] | Switch on/off toggle fancy fonts with your message. |
+| [test] | Used to do some testing... atm prints a cat on 3 lines. |
 | [TMP] | MORE TO FILL OUT HERE SOON |
+</details>
 
+# Colours:
+<details>
+<summary>Show the list of colours.</summary>
++ [random]
++ [white]
++ [slayer]
++ [blur]
++ [google]
++ [sunset]
++ [grey]
++ [rain]
++ [night]
++ [yellow]
++ [red]
++ [fire]
++ [water]
++ [pink]
++ [ghost]
++ [tree]
++ [ting]
++ [spoon]
++ [tango]
+__[*]You can add more to tools.py as you like.__
 </details>
 
 
-
-
+[1]
+__"Please note i'm still adding things to this and it will change often."__
