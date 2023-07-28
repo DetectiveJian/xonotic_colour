@@ -16,7 +16,7 @@ from tools import commands, colours, font_list
 
 """
 Usage:
-	Commands: help, joke, who, search, trans, test, name
+	Commands: help, joke, who, search, trans, test, name. font
 	
 	Colours: random, white, slayer, blue, google, sunset etc
 	
@@ -40,6 +40,16 @@ app = Flask(__name__)
 
 # Global Colour Set
 COLOUR = []
+# Global Font Set
+FONT = False
+
+
+def toggle_font():
+	global FONT
+	if FONT is False:
+		FONT = True
+	else:
+		FONT = False
 
 
 def list_all_cmds():
@@ -135,6 +145,7 @@ def colour_text(msg):
 	return str(colour_text)
 	"""
 	global COLOUR
+	global FONT
 	s = 0
 	new = ""
 	msgb = ""
@@ -143,8 +154,9 @@ def colour_text(msg):
 		msg = msg[:250]
 	msg = list(msg)
 	for char in msg:
-		if char in font_list.keys():
-			char = font_list[char]
+		if FONT is True:
+			if char in font_list.keys():
+				char = font_list[char]
 		if s == len(COLOUR):
 			s = 0
 		if char == " ":
@@ -203,6 +215,7 @@ def answer_the_call():
 		
 		if cmd == "[name]":
 			# set the player name
+			# N.B there is a char cap i need to find !
 			code = colour_text(text)
 			return commands[cmd].format(newname=code)
 
@@ -215,11 +228,21 @@ def answer_the_call():
 				return commands[cmd].format(msg=code)
 			except ValueError:
 				return "say ^1[ERROR] Try: [trans]:language:Text here..."
+
 		if cmd == "[test]":
 			# few bits for testing
 			# return "say 卂 乃 匚 ᗪ 乇 千 Ꮆ 卄 丨 ﾌ Ҝ ㄥ 爪 几 ㄖ 卩 Ɋ 尺 丂 ㄒ ㄩ ᐯ 山 乂 ㄚ 乙"
 			st = ["^5|\---/|","^5| ^1o^6_^1o ^5|","^5 \_^6^^^5_/"]
 			return f"say {st[0]} ; defer 1 \"say {st[1]}\" ; defer 4 \"say {st[2]}\""
+		
+		if cmd == "[font]":
+			toggle_font()
+			fc = ""
+			if FONT is True:
+				fc = "^2"
+			else:
+				fc = "^1" 
+			return f"say Set {cmd} = {fc}{FONT}"
 
 	elif cmd in cols:
 		print(f"[*] COLOUR CHANGE: {cmd}")

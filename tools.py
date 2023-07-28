@@ -10,6 +10,7 @@ commands = {
 	"[search]": "say [search] ^1COMMAND: ^2OK ; say ^2Word^7:{word} ^2Info^7: ^1{search}",
 	"[trans]": "say ^1TRS: {msg}",
 	"[name]": "say [name]  {newname} ^1COMMAND: ^2OK ; name {newname}",
+	"[font]": "",
 	"[test]": ""
 	}
 
