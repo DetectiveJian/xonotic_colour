@@ -28,6 +28,7 @@ __Hit 'o' for chat in colour__
 </details>
 
 
+---- | ----
 
 
 # *Fedora Linux 38 (Workstation Edition) x86_64*
@@ -54,12 +55,14 @@ __Hit 'o' for chat in colour__
 </details>
 
 
+---- | ----
 
 
 [1]
 __"Please note i'm still adding things to this and it will change often."__
 
 
+---- | ----
 
 
 # Commands:
