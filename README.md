@@ -4,38 +4,49 @@ Python colour code for Xonotic game chat using flask.
 
 
 
-***Ubuntu / Mint etc... Linux Mint 21.1***
+# *Ubuntu / Mint etc... Linux Mint 21.1*
+<details>
+<summary>How to setup...</summary>
 ```
 sudo apt install python3-pip
 pip3 install -r requierments.txt
 python3 chat-server.py
 ```
+
 will show Flask Running then:
 move chat-server.cfg to your game Xonotic/data
-go to Xonotic and hit ` \` ` for terminal 
+go to Xonotic and hit "`" for terminal 
+
 ```
 exec chat-server.cfg
 ```
-Hit 'o' for chat in colour
+
+__Hit 'o' for chat in colour__
+
+</details>
 
 
-
-***Fedora Linux 38 (Workstation Edition) x86_64***
+# *Fedora Linux 38 (Workstation Edition) x86_64*
+<details>
+<summary>How to setup...</summary>
 ```
 sudo dnf install python3-pip
 pip3 install requirements.txt
 python3 chat-server.py
 ```
+
 will show Flask Running then:
 move chat-server.cfg to your game Xonotic/data
-go to Xonotic and hit ` \` ` for terminal 
+go to Xonotic and hit "`" for terminal 
+
 ```
 exec chat-server.cfg
 ```
-Hit 'o' for chat in colour
 
+__Hit 'o' for chat in colour__
 
+</details>
 
 
 [1]
-***"Please note i'm still adding things to this and it will change often."***
+__"Please note i'm still adding things to this and it will change often."__
