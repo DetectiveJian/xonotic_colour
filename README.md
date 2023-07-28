@@ -54,6 +54,7 @@ __Hit 'o' for chat in colour__
 # Commands:
 <details>
 <summary>Show the list of commands and how to use them.</summary>
+
 | Command | Description |
 | ---- | ---- |
 | o | KEY o is bound to new colour chat command. |
@@ -66,11 +67,13 @@ __Hit 'o' for chat in colour__
 | [font] | Switch on/off toggle fancy fonts with your message. |
 | [test] | Used to do some testing... atm prints a cat on 3 lines. |
 | [TMP] | MORE TO FILL OUT HERE SOON |
+
 </details>
 
 # Colours:
 <details>
 <summary>Show the list of colours.</summary>
+
 + [random]
 + [white]
 + [slayer]
@@ -90,9 +93,12 @@ __Hit 'o' for chat in colour__
 + [ting]
 + [spoon]
 + [tango]
+
 __[*]You can add more to tools.py as you like.__
+
 </details>
 
 
 [1]
 __"Please note i'm still adding things to this and it will change often."__
+
