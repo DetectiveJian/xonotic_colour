@@ -57,16 +57,15 @@ __Hit 'o' for chat in colour__
 
 | Command | Description |
 | ---- | ---- |
-| o | KEY o is bound to new colour chat command. |
+| o | KEY 'o' is bound to new colour chat command. |
 | [help] | Sow the commands and colour list. |
-| [joke] | Get a random joke from an api. |
-| [search] | [search] Word : Search for word referance. |
 | [who] | Show who made this app. |
-| [trans] | [trans]:language:your message > translate from english. |
-| [name] | [name] Something : Change the player name to Something. |
 | [font] | Switch on/off toggle fancy fonts with your message. |
+| [joke] | Get a random joke from an api. |
 | [test] | Used to do some testing... atm prints a cat on 3 lines. |
-| [TMP] | MORE TO FILL OUT HERE SOON |
+| [search]Word | Search for word referance, return results. |
+| [name]Name | Change the player name to given string. |
+| [trans]:lang:msg | Translate from english to given language, TRS:message in language. |
 
 </details>
 
