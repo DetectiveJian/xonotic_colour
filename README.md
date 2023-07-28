@@ -1,7 +1,7 @@
 
 Python colour code for Xonotic game chat using flask.
 
-![Project Logo From I nternet](https://github.com/shazza-works/xonotic_colour/blob/main/m1.png)
+![Project Logo From I nternet](https://github.com/shazza-works/xonotic_colour/blob/main/logo.png)
 
 
 # *Ubuntu / Mint etc... Linux Mint 21.1*
