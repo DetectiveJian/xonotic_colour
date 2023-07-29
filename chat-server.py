@@ -230,6 +230,14 @@ def answer_the_call():
 				return commands[cmd].format(num=num)
 			else:
 				return f"say [!] Sorry {num} is not a nade type (0-10) !"
+
+		if cmd == "[tell]":
+			# Tell a user a message by their number.
+			num = text.split(" ")[0].strip()
+			print(f"NUM: {num}")
+			msg = " ".join(text.split(" ")[1:])
+			print(f"MSG: {msg}")
+			return commands[cmd].format(num=num, msg=msg)
 		
 		if cmd == "[name]":
 			# set the player name

@@ -11,6 +11,7 @@ commands = {
 	"[name]": "say [*]^1COMMAND ^7[name] {newname} <> ^2OK ; name {newname}",
 	"[nade]": "say [*]^1COMMAND ^7[nade] {num} <> ^2OK ; cl_nade_type {num}",
 	"[trans]": "say [*]^1TRS: {msg}",
+	"[tell]": "say [*]^1COMMAND ^7[tell] #{num} <> ^2OK ; tell {num} {msg}",
 	"[font]": "say [*]^1COMMAND ^7[font] {fc}{FONT} ^7<> ^2OK",
 	"[test]": ""
 	}
