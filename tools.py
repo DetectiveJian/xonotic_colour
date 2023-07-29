@@ -4,13 +4,14 @@
 #
 # set of do something commands
 commands = {
-	"[help]": "{help}",
-	"[joke]": "say [joke] ^1COMMAND: ^2OK; defer 1.5 \"say {joke}\"",
-	"[who]": "say [who] ^1COMMAND: ^2OK; say ^1Shazza^7-^4Works^7, Using a little ^xf00P^xf40y^xf70t^xfa0h^xef0o^xbf0n ^x2f03^x0f03^x0f2.^x0f91^x0fd0^x0df.^x09f6 ^7and ^6Flask",
-	"[search]": "say [search] ^1COMMAND: ^2OK ; say ^2Word^7:{word} ^2Info^7: ^1{search}",
-	"[trans]": "say ^1TRS: {msg}",
-	"[name]": "say [name]  {newname} ^1COMMAND: ^2OK ; name {newname}",
-	"[font]": "",
+	"[help]": "say ^1COMMAND ^7[help] <> ^2OK ; say ^4{helpa} ; defer 3 \"say ^4{helpb}",
+	"[joke]": "say [*]^1COMMAND ^7[joke] <> ^2OK; defer 1.5 \"say {joke}\"",
+	"[who]": "say [*]^1COMMAND ^7[who] <> ^2OK; say ^1Shazza^7-^4Works^7, Using a little ^xf00P^xf40y^xf70t^xfa0h^xef0o^xbf0n ^x2f03^x0f03^x0f2.^x0f91^x0fd0^x0df.^x09f6 ^7and ^6Flask",
+	"[search]": "say ^1COMMAND ^7[search] <> ^2OK ; say ^2Word^7:{word} ^2Info^7: ^1{search}",
+	"[name]": "say [*]^1COMMAND ^7[name] {newname} <> ^2OK ; name {newname}",
+	"[nade]": "say [*]^1COMMAND ^7[nade] {num} <> ^2OK ; cl_nade_type {num}",
+	"[trans]": "say [*]^1TRS: {msg}",
+	"[font]": "say [*]^1COMMAND ^7[font] {fc}{FONT} ^7<> ^2OK",
 	"[test]": ""
 	}
 

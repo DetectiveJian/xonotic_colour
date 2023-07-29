@@ -63,8 +63,9 @@ __Hit 'o' for chat in colour__
 | [font] | Switch on/off toggle fancy fonts with your message. |
 | [joke] | Get a random joke from an api. |
 | [test] | Used to do some testing... atm prints a cat on 3 lines. |
-| [search]Word | Search for word referance, return results. |
-| [name]Name | Change the player name to given string in set colour. |
+| [nade]num | Set Nade Type from 0-10 or show error. |
+| [search]word | Search for word referance, return results. |
+| [name]name | Change the player name to given string in set colour. |
 | [trans]:lang:msg | Translate from english to given language, TRS:message in language. |
 
 </details>

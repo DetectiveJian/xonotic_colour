@@ -205,7 +205,7 @@ def answer_the_call():
 
 		if cmd == "[help]":
 			# show the commands and colours
-			return commands[cmd].format(help=f"say ^1{' '.join(coms)}; defer 3.2 \"say ^1{' '.join(cols)}\"")
+			return commands[cmd].format(helpa=f"{''.join(coms)}", helpb=f"{''.join(cols)}")
 
 		if cmd == "[joke]":
 			# grab a joke from the api
@@ -220,6 +220,16 @@ def answer_the_call():
 		if cmd == "[who]":
 			# show who made this
 			return commands[cmd]
+
+		if cmd == "[nade]":
+			# Set the player nade type from 0-10
+			# will make a list for these to convert num to names 
+			num = int(text.strip())
+			nades = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+			if num in nades:
+				return commands[cmd].format(num=num)
+			else:
+				return f"say [!] Sorry {num} is not a nade type (0-10) !"
 		
 		if cmd == "[name]":
 			# set the player name
@@ -250,7 +260,7 @@ def answer_the_call():
 				fc = "^2"
 			else:
 				fc = "^1" 
-			return f"say Set {cmd} = {fc}{FONT}"
+			return commands[cmd].format(fc=fc, FONT=FONT)
 
 	elif cmd in cols:
 		print(f"[*] COLOUR CHANGE: {cmd}")
