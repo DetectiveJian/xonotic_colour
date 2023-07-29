@@ -12,7 +12,7 @@ from time import sleep
 from flask import Flask, request
 from duckduckgo_search import DDGS
 from python_translator import Translator
-from tools import commands, colours, font_list
+from tools import commands, colours, font_list, nades
 
 
 """
@@ -224,12 +224,11 @@ def answer_the_call():
 		if cmd == "[nade]":
 			# Set the player nade type from 0-10
 			# will make a list for these to convert num to names 
-			num = int(text.strip())
-			nades = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-			if num in nades:
-				return commands[cmd].format(num=num)
+			num = text.strip()
+			if num in nades.keys():
+				return commands[cmd].format(num=num, name=nades[num])
 			else:
-				return f"say [!] Sorry {num} is not a nade type (0-10) !"
+				return f"say [!] Sorry {num} is not a nade type (1-11) !"
 
 		if cmd == "[tell]":
 			# Tell a user a message by their number.

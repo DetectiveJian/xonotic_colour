@@ -9,7 +9,7 @@ commands = {
 	"[who]": "say [*]^1COMMAND ^7[who] <> ^2OK; say ^1Shazza^7-^4Works^7, Using a little ^xf00P^xf40y^xf70t^xfa0h^xef0o^xbf0n ^x2f03^x0f03^x0f2.^x0f91^x0fd0^x0df.^x09f6 ^7and ^6Flask",
 	"[search]": "say ^1COMMAND ^7[search] <> ^2OK ; say ^2Word^7:{word} ^2Info^7: ^1{search}",
 	"[name]": "say [*]^1COMMAND ^7[name] {newname} <> ^2OK ; name {newname}",
-	"[nade]": "say [*]^1COMMAND ^7[nade] {num} <> ^2OK ; cl_nade_type {num}",
+	"[nade]": "say [*]^1COMMAND ^7[nade] {num}: {name} <> ^2OK ; cl_nade_type {num}",
 	"[trans]": "say [*]^1TRS: {msg}",
 	"[tell]": "say [*]^1COMMAND ^7[tell] #{num} <> ^2OK ; tell {num} {msg}",
 	"[font]": "say [*]^1COMMAND ^7[font] {fc}{FONT} ^7<> ^2OK",
@@ -81,6 +81,21 @@ font_list = {
 	"q": "ｑ", "r": "ｒ", "s": "ｓ", "t": "ｔ", "u": "ｕ", "v": "ｖ", "w": "ｗ", "x": "ｘ", "y": "ｙ", "z": "ｚ", "A": "Ａ", "B": "Ｂ", "C": "Ｃ", "D": "Ｄ", "E": "Ｅ", "F": "Ｆ",
 	"G": "Ｇ", "H": "Ｈ", "I": "Ｉ", "J": "Ｊ", "K":"Ｋ", "L": "Ｌ", "M": "Ｍ", "N": "Ｎ", "O": "Ｏ", "P": "Ｐ", "Q": "Ｑ", "R": "Ｒ", "S": "Ｓ", "T": "Ｔ", "U": "Ｕ", "V": "Ｖ",
 	"W": "Ｗ", "X": "Ｘ", "Y": "Ｙ", "Z": "Ｚ", " ": " "
+	}
+
+
+nades = {
+	"1": "Normal",
+	"2": "Napalm",
+	"3": "Nitro",
+	"4": "Translocate",
+	"5": "Spawn",
+	"6": "Heal",
+	"7": "Pokenade",
+	"8": "Entrap",
+	"9": "Veil",
+	"10": "Ammo",
+	"11": "Darkness",
 	}
 
 #EOF#
