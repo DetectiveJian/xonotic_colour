@@ -4,17 +4,16 @@
 #
 # set of do something commands
 commands = {
-	"[help]": "say ^1COMMAND ^7[help] <> ^2OK ; say ^4{helpa} ; defer 3 \"say ^4{helpb}",
+	"[help]": "say ^1COMMAND ^7[help] <> ^2OK ^4{helpa} ; defer 3 \"say ^4{helpb}\"",
 	"[joke]": "say [*]^1COMMAND ^7[joke] <> ^2OK ; say ^5{joke}",
 	"[who]": "say [*]^1COMMAND ^7[who] <> ^2OK ; say ^1Shazza^7-^4Works^7, Using a little ^xf00P^xf40y^xf70t^xfa0h^xef0o^xbf0n ^x2f03^x0f03^x0f2.^x0f91^x0fd0^x0df.^x09f6 ^7and ^6Flask",
 	"[search]": "say ^1COMMAND ^7[search] <> ^2OK ; say ^2Word^7:{word} ^2Info^7: ^1{search}",
 	"[name]": "say [*]^1COMMAND ^7[name] {newname} <> ^2OK ; name {newname}",
-	"[rname]": "{tmp}",
-	#"[rname]": "say [*]^1COMMAND ^7[rname] {newname} <> ^2OK ; name {newname}",
 	"[nade]": "say [*]^1COMMAND ^7[nade] {num}: {name} <> ^2OK ; cl_nade_type {num}",
 	"[trans]": "say [*]^1TRS: {msg}",
 	"[tell]": "say [*]^1COMMAND ^7[tell] #{num} <> ^2OK ; tell {num} {msg}",
 	"[font]": "say [*]^1COMMAND ^7[font] {fc}{FONT} ^7<> ^2OK",
+	"[rname]": "{tmp}",
 	"[test]": "{msg}"
 	}
 
@@ -42,9 +41,6 @@ colours = {
 	"[red]": ["#ed1616", "#e91516", "#e51516", "#e01416", "#dc1416", "#d81316", "#d41316", "#d01216", "#cc1216", "#c81116", "#c41116", "#c01116", "#bb1016", "#b71016", "#b31016", "#af1016", "#ab0f15",
 		"#a70f15", "#a30f15", "#9f0f15", "#9b0e14", "#970e14", "#930e14", "#8f0e13", "#8c0d13", "#880d13", "#840d12", "#800d12", "#7c0d12", "#780c11", "#740c11", "#710c10", "#6d0c10", "#690c0f",
 		"#650b0e", "#620b0e", "#5e0b0d", "#5a0b0c", "#570a0b", "#530a0a"],
-	"[water]": ["#2a00ff", "#2502fa", "#2104f4", "#1c06ef", "#1808ea", "#150ae5", "#110ce0", "#0e0ddb", "#0f13d6", "#1119d1", "#121fcc", "#1424c8", "#1629c3", "#172ebe", "#1832ba", "#1a36b5", "#1b3ab1",
-		"#1c3dac", "#1d40a8", "#1f43a4", "#20469f", "#21489b", "#224a97", "#234c93", "#234d8f", "#244f8b", "#255087", "#265183", "#26517f", "#27527b", "#275277", "#285274", "#285270", "#29516c",
-		"#295169", "#295065", "#2a4f62", "#2a4e5f", "#2a4d5b", "#2a4c58"],
 	"[pink]": ["#c9389e", "#ca3ca0", "#cc41a1", "#cd45a3", "#cf48a4", "#d04ca6", "#d150a7", "#d354a9", "#d457ab", "#d55bac", "#d75eae", "#d862af", "#d965b1", "#db68b3", "#dc6cb4", "#dd6fb6", "#de72b8",
 		"#e075b9", "#e178bb", "#e27cbc", "#e37fbe", "#e582c0", "#e685c1", "#e788c3", "#e88bc5", "#e98ec6", "#eb91c8", "#ec95ca", "#ed98cb", "#ee9bcd", "#ef9ecf", "#f0a1d0", "#f1a4d2", "#f3a7d4",
 		"#f4aad5", "#f5add7", "#f6b0d9", "#f7b3db", "#f8b6dc", "#f9b9de"],
@@ -74,7 +70,7 @@ colours = {
 		"#fd7214", "#fe7315", "#fe7517", "#fe7618", "#fe7719", "#fe791a", "#fe7a1b", "#fe7b1d", "#ff7d1e", "#ff7e1f", "#ff7f20", "#fe8021", "#fb8021", "#f98121", "#f68121", "#f38221", "#f08221",
 		"#ed8221", "#eb8321", "#e88321", "#e58321", "#e28421", "#df8421", "#dd8421", "#da8521", "#d78521", "#d48621", "#d28621", "#cf8621", "#cc8721", "#c98721", "#c68721", "#c48821", "#c18821",
 		"#be8821", "#bb8921", "#b88921", "#b68a21", "#b38a21", "#b38920", "#b3871f", "#b4851e", "#b5831d", "#b6811b", "#b77f1a", "#b77d19", "#b87b18", "#b97917", "#ba7715", "#ba7614", "#bb7413",
-		"#bc7212", "#bd7011", "#be6e10", "#be6c0e", "#bf6a0d", "#c0680c", "#c1660b", "#c2640a", "#c26208", "#c36007", "#c45f06", "#c55d05", "#c65b04", "#c65902", "#c75701", "#c85500"]
+		"#bc7212", "#bd7011", "#be6e10", "#be6c0e", "#bf6a0d", "#c0680c", "#c1660b", "#c2640a", "#c26208", "#c36007", "#c45f06", "#c55d05", "#c65b04", "#c65902", "#c75701", "#c85500"],
 	}
 
 
@@ -102,6 +98,7 @@ nades = {
 
 
 names = {
+	0: 'Rug Muncher',
 	1: 'shaquille.oatmeal',
 	2: 'hanging_with_my_gnomies',
 	3: 'hoosier-daddy',
@@ -168,6 +165,7 @@ names = {
 	64: 'bigfootisreal',
 	65: 'santas_number1_elf',
 	67: 'thehornoftheunicorn',
+	66: 'Axe Wound',
 	68: 'iNeed2p',
 	69: 'abductedbyaliens',
 	70: 'actuallynotchrishemsworth',
@@ -312,6 +310,7 @@ names = {
 	209: 'WakeAwake',
 	210: 'Coronacosmo',
 	211: 'wherearetheavocados',
+	212: 'TamponMuncher	',
 	213: 'ijustwanttobeme',
 	214: 'TheKidsCallMeBoss',
 	215: 'SewerSquirrel',
@@ -344,6 +343,7 @@ names = {
 	242: 'Hot Name Here',
 	243: 'Carmelpoptart',
 	245: 'notfunnyatall',
+	244: 'Fog-Sniffer',
 	246: 'Mangonificent',
 	247: 'toastcrunch',
 	248: 'fizzysodas',

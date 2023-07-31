@@ -191,7 +191,6 @@ def answer_the_call():
 	args: /chat?say=input_massage
 	return http.response
 	"""
-
 	data = request.args.get("say")
 	clean = data.split("$", 1)[0].strip()
 	cmd = get_cmd(clean)
@@ -236,20 +235,19 @@ def answer_the_call():
 
 		if cmd == "[name]":
 			# set the player name
-			# N.B there is a char cap i need to find !
+			# N.B: CHAR cap seems to be 160 chars
 			code = colour_text(text)
 			return commands[cmd].format(newname=code)
 
 		if cmd == "[rname]":
 			# set the player name from random list
-			#name = random.choice(names)
-			#code = colour_text(name)
-			out = []
 			time = 10
-			for name in names:
-				name = names[name]
-				# check this
-				out.append(f"defer {str(time)} \"say [*]New Name: {name} ; name {name}\";")
+			out = []
+			l = list(names.values())
+			random.shuffle(l)
+			for name in l:
+				code = colour_text(name)
+				out.append(f"defer {str(time)} \"say [*]New Name: {name} ; name {code}\";")
 				time += 60
 			done = " ".join(out)
 			return commands[cmd].format(tmp=done)

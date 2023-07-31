@@ -97,10 +97,12 @@ __Hit 'o' for chat in colour__
 + [spoon]
 + [tango]
 
-__[*]You can add more to tools.py as you like.__
+__[*]You can add more sets or functions to tools.py as you like.__
 
 </details>
 
 
 [1]
 __"Please note i'm still adding things to this and it will change often."__
+[2]
+__"Some of the functions have wait times of 1-3 sec due to chat flood filters in place and I have no way to change that!"__
