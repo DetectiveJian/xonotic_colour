@@ -12,22 +12,22 @@ from time import sleep
 from flask import Flask, request
 from duckduckgo_search import DDGS
 from python_translator import Translator
-from tools import commands, colours, font_list, nades
+from tools import commands, colours, font_list, nades, names, woman
 
 
 """
 Usage:
-	Commands: help, joke, who, search, trans, test, name. font
-	
+	Commands: help, joke, who, search, trans, test, name. font, etc
+
 	Colours: random, white, slayer, blue, google, sunset etc
-	
+
 	Format: [command] Text or args.
-	
+
 	example: press 'o'
 		type [spoon]
 		hit enter
 		colour codes will change to spoon
-		
+
 		press 'o'
 		type [trans]:french:Your message text here
 		hit enter
@@ -41,9 +41,9 @@ app = Flask(__name__)
 
 # Global Colour Set
 COLOUR = []
-# Global Font Set
+# Global Font Setting
 FONT = False
-# Seen Jokes
+# Global Jokes Seen
 JOKES = []
 
 
@@ -83,14 +83,10 @@ def get_joke():
 	return str(joke)
 	"""
 	global JOKES
-	jokesapi = "https://api.chucknorris.io/jokes/random"
-	r = requests.get(jokesapi).content
-	joke = json.loads(r)['value']
-	while not joke in JOKES:
-		JOKES.append(joke)
-		return joke
-	else:
-		get_joke()
+	url = "https://v2.jokeapi.dev/joke/Dark,Pun,Spooky?blacklistFlags=nsfw,religious,racist,sexist,explicit&type=single"
+	js = json.loads(requests.get(url).content)
+	joke =  js["joke"].replace("\n", " ")
+	return joke
 
 
 def duck_search(text):
@@ -209,8 +205,8 @@ def answer_the_call():
 
 		if cmd == "[joke]":
 			# grab a joke from the api
-			joke = get_joke().replace("\"", "").replace("'", "")
-			return commands[cmd].format(joke=f"^5{joke}")
+			joke = get_joke()
+			return commands[cmd].format(joke=joke)
 
 		if cmd == "[search]":
 			# search online for a word
@@ -223,7 +219,7 @@ def answer_the_call():
 
 		if cmd == "[nade]":
 			# Set the player nade type from 0-10
-			# will make a list for these to convert num to names 
+			# will make a list for these to convert num to names
 			num = text.strip()
 			if num in nades.keys():
 				return commands[cmd].format(num=num, name=nades[num])
@@ -237,12 +233,26 @@ def answer_the_call():
 			msg = " ".join(text.split(" ")[1:])
 			print(f"MSG: {msg}")
 			return commands[cmd].format(num=num, msg=msg)
-		
+
 		if cmd == "[name]":
 			# set the player name
 			# N.B there is a char cap i need to find !
 			code = colour_text(text)
 			return commands[cmd].format(newname=code)
+
+		if cmd == "[rname]":
+			# set the player name from random list
+			#name = random.choice(names)
+			#code = colour_text(name)
+			out = []
+			time = 10
+			for name in names:
+				name = names[name]
+				# check this
+				out.append(f"defer {str(time)} \"say [*]New Name: {name} ; name {name}\";")
+				time += 60
+			done = " ".join(out)
+			return commands[cmd].format(tmp=done)
 
 		if cmd == "[trans]":
 			# translate a message
@@ -258,15 +268,15 @@ def answer_the_call():
 			# few bits for testing
 			# return "say 卂 乃 匚 ᗪ 乇 千 Ꮆ 卄 丨 ﾌ Ҝ ㄥ 爪 几 ㄖ 卩 Ɋ 尺 丂 ㄒ ㄩ ᐯ 山 乂 ㄚ 乙"
 			st = ["^5|\---/|","^5| ^1o^6_^1o ^5|","^5 \_^6^^^5_/"]
-			return f"say {st[0]} ; defer 1 \"say {st[1]}\" ; defer 4 \"say {st[2]}\""
-		
+			return commands[cmd].format(msg=f"say {st[0]} ; defer 1 \"say {st[1]}\" ; defer 4 \"say {st[2]}\"")
+
 		if cmd == "[font]":
 			toggle_font()
 			fc = ""
 			if FONT is True:
 				fc = "^2"
 			else:
-				fc = "^1" 
+				fc = "^1"
 			return commands[cmd].format(fc=fc, FONT=FONT)
 
 	elif cmd in cols:
@@ -280,6 +290,10 @@ def answer_the_call():
 		else:
 			set_colour(cmd)
 			return f"say {cmd} ^1COLOUR: ^2OK"
+
+	elif cmd == "[ids]":
+		JOKES.sort()
+		return f"say {JOKES}"
 
 	else:
 		msg = colour_text(cmd)

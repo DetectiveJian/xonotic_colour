@@ -40,7 +40,7 @@ __Hit 'o' for chat in colour__
 ### will show Flask Running @ 127.0.0.1 port 5000 then:
 __NB: move chat-server.cfg to your game Xonotic/data__
 
-> go to Xonotic and hit ` for game console 
+> go to Xonotic and hit ` for game console
 
 ```
 exec chat-server.cfg
@@ -66,7 +66,9 @@ __Hit 'o' for chat in colour__
 | [tell]number | Tell a player a message by number `who` |
 | [search]word | Search for word referance, return results. |
 | [name]name | Change the player name to given string in set colour. |
+| [rname] | Set a random player name from list every 60 sec. |
 | [nade]number | Set Nade Type from 0-10 or show error. |
+| [ids] | Show the ID's of seen API jokes. |
 | [trans]:lang:msg | Translate from english to given language, TRS:message in language. |
 
 </details>
@@ -102,4 +104,3 @@ __[*]You can add more to tools.py as you like.__
 
 [1]
 __"Please note i'm still adding things to this and it will change often."__
-
