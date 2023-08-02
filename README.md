@@ -1,12 +1,5 @@
 <h1 align="center">Shazza Works</h1>
 <p align="center">Views: <img src="https://profile-counter.glitch.me/shazza-works/count.svg" alt="Yo Momma"/>
-
-- 🌱 I’m currently learning **Anything**
-
-- 👨‍💻 All of my projects are available at [https://github.com/shazza-works](https://github.com/shazza-works)
-
-- 📄 Know about my experiences [Bash, Flask, Python, Apache](Bash, Flask, Python, Apache)
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://discord.gg/https://discord.gg/hxWvKTkdGg" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="https://discord.gg/hxWvKTkdGg" height="70" width="90" /></a></p>
