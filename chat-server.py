@@ -83,10 +83,15 @@ def get_joke():
 	return str(joke)
 	"""
 	global JOKES
-	url = "https://v2.jokeapi.dev/joke/Dark,Pun,Spooky?blacklistFlags=nsfw,religious,racist,sexist,explicit&type=single"
-	js = json.loads(requests.get(url).content)
-	joke =  js["joke"].replace("\n", " ")
-	return joke
+
+	try:
+		if len(JOKES) <= 0:
+			url = "https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun,Spooky,Christmas?blacklistFlags=nsfw,religious,racist,sexist,explicit&type=single&amount=10"
+			JOKES = list(json.loads(requests.get(url).content)["jokes"])
+	finally:
+		joke = JOKES.pop()
+		joke, iid =  joke["joke"].replace("\n", " "), joke['id']
+		return joke
 
 
 def duck_search(text):
@@ -142,32 +147,32 @@ def set_colour(name):
 	COLOUR = colours[name]
 
 
-def colour_text(msg):
+def colour_text(msg, colour=COLOUR):
 	"""
 	Method that dose the colour of chars in message
 	args: str(message)
 	return str(colour_text)
 	"""
-	global COLOUR
+	#global COLOUR
 	global FONT
 	s = 0
 	new = ""
 	msgb = ""
-	if len(msg) >= 250:
-		msgb = msg[250:]
-		msg = msg[:250]
+	if len(msg) >= 160:
+		msgb = msg[160:]
+		msg = msg[:160]
 	msg = list(msg)
 	for char in msg:
 		if FONT is True:
 			if char in font_list.keys():
 				char = font_list[char]
-		if s == len(COLOUR):
+		if s == len(colour):
 			s = 0
 		if char == " ":
 			new = new + " "
 			s = s - 1
 		else:
-			code = code_converter(COLOUR[s])
+			code = code_converter(colour[s])
 			new = new + "^x" + code + char
 		s = s + 1
 	return new + msgb
@@ -241,16 +246,23 @@ def answer_the_call():
 
 		if cmd == "[rname]":
 			# set the player name from random list
+			# NB: Your name is longer than 127 chars! It has been truncated issue.
 			time = 10
 			out = []
 			l = list(names.values())
 			random.shuffle(l)
 			for name in l:
-				code = colour_text(name)
+				key = random.choice(list(colours.keys()))
+				code = colour_text(name, colour=colours[key])
 				out.append(f"defer {str(time)} \"say [*]New Name: {name} ; name {code}\";")
-				time += 60
+				time += 30
 			done = " ".join(out)
 			return commands[cmd].format(tmp=done)
+
+		if cmd == "[kname]":
+			# Stop all defers to name changes, needed on exit
+			# add finally block for that.
+			return commands[cmd]
 
 		if cmd == "[trans]":
 			# translate a message
@@ -277,21 +289,14 @@ def answer_the_call():
 				fc = "^1"
 			return commands[cmd].format(fc=fc, FONT=FONT)
 
-	elif cmd in cols:
-		print(f"[*] COLOUR CHANGE: {cmd}")
-
 		if cmd == "[random]":
 			make_random_codes()
 			set_colour("[random]")
 			return f"say {cmd} ^1COLOUR: ^2OK; say [info] 30 New Random Codes Made."
 
-		else:
-			set_colour(cmd)
-			return f"say {cmd} ^1COLOUR: ^2OK"
-
-	elif cmd == "[ids]":
-		JOKES.sort()
-		return f"say {JOKES}"
+	if cmd in cols:
+		set_colour(cmd)
+		return f"say {cmd} ^1COLOUR: ^2OK"
 
 	else:
 		msg = colour_text(cmd)
