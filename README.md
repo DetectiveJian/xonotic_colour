@@ -65,7 +65,6 @@ exec chat-server.cfg
 
 __Hit 'o' for chat in colour__
 
-NOTE: If you want to use this app frequently, it is recommended to append "`exec chat-server.cfg`" to `autoexec.cfg` file in `~/.xonotic/data/autoexec.cfg`
 
 </details>
 
@@ -149,7 +148,6 @@ exec chat-server.cfg
 
 __Hit 'o' for chat in colour__
 
-NOTE: If you want to use this app frequently, it is recommended to append "`exec chat-server.cfg`" to `autoexec.cfg` file in `~/.xonotic/data/autoexec.cfg`
 
 </details>
 
