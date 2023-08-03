@@ -1,5 +1,4 @@
-requests
-beautifulsoup4==4.12.2
-duckduckgo-search==3.8.3
+Requests==2.31.0
 Flask==2.3.2
-python-translator==1.0.3
+duckduckgo_search==3.8.3
+python_translator==1.0.3
