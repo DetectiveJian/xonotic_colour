@@ -13,10 +13,45 @@
 <details>
 <summary>How to setup...</summary>
 
-```bash
-	sudo apt install python3-pip
-	pip3 install -r requierments.txt
-	python3 chat-server.py
+Make sure python3, python3-venv & pip are installed on your system:
+```
+sudo apt install python3 python3-pip python3-venv
+```
+
+Clone the repo to your local machine:
+```
+git clone https://github.com/shazza-works/xonotic_colour.git
+```
+
+Move into the repo directory:
+```
+cd xonotic_colour
+```
+
+Setup a python virtual environment:
+```
+python3 -m venv .venv
+```
+
+Now activate the virtual environmet:
+```
+source .venv/bin/activate
+```
+> NOTE: to deactivate the virtual environment run:
+`deactivate`
+
+Update pip and install wheel package:
+```
+pip install --upgrade pip wheel
+```
+
+Now install the requirements:
+```
+pip install -r requirements.txt
+```
+Run the server with:
+```
+python3 chat-server.py
 ```
 
 ### will show Flask Running @ 127.0.0.1 port 5000 then:
@@ -29,6 +64,7 @@ exec chat-server.cfg
 ```
 
 __Hit 'o' for chat in colour__
+
 
 </details>
 
@@ -55,6 +91,65 @@ __Hit 'o' for chat in colour__
 
 </details>
 
+# *ArchLinux*
+<details>
+<summary>How to setup...</summary>
+
+Make sure python3 is installed on your system:
+```
+sudo pacman -S --needed python3
+```
+
+Clone the repo to your local machine:
+```
+git clone https://github.com/shazza-works/xonotic_colour.git
+```
+
+Move into the repo directory:
+```
+cd xonotic_colour
+```
+
+Setup a python virtual environment:
+```
+python3 -m venv .venv
+```
+
+Now activate the virtual environmet:
+```
+source .venv/bin/activate
+```
+> NOTE: to deactivate the virtual environment run:
+`deactivate`
+
+Update pip and install wheel package:
+```
+pip install --upgrade pip wheel
+```
+
+Now install the requirements:
+```
+pip install -r requirements.txt
+```
+
+Run the server with:
+```
+python3 chat-server.py
+```
+
+### will show Flask Running @ 127.0.0.1 port 5000 then:
+__NB: move chat-server.cfg to your game Xonotic/data__
+
+> go to Xonotic and hit ` for game console
+
+```
+exec chat-server.cfg
+```
+
+__Hit 'o' for chat in colour__
+
+
+</details>
 
 # Commands:
 <details>
